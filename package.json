@@ -1,0 +1,31 @@
+{
+  "name": "dsh-book",
+  "version": "0.1.0",
+  "description": "小本本：三本书——工作本（任务·可搜索·三天冷存）、日记本（经历·世界树）、笔记本（人格·扁平注入）",
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "memory", "notebook", "book"],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib/", "client.js", "cordis.patch.yml", "README.md"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "license": "MIT"
+}

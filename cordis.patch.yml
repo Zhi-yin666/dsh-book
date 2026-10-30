@@ -1,0 +1,11 @@
+# dsh-book bundle patch —— 把插件插进 profile 的层栈
+# ⚠️ 两个坑（2026-10-26 都踩过）：
+#   ① id 必须等于包名：DSH 的设置页用「loader entry 的 id」当命名空间去扫 volatile 字段
+#   ② entry 必须带 config 初始值：settings.describe() 只扫「有配置实例 + 有 volatile 字段」的条目，
+#      只在模块里 export Config、patch 里不给 config，是扫不出来的（dsh-image-gen 的 patch 里就带着 config）
+- insert:
+    - id: dsh-book
+      name: 'dsh-book'
+      config:
+        cardPath: ''
+        cardLimit: 600

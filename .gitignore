@@ -1,0 +1,16 @@
+# 依赖
+node_modules/
+pnpm-lock.yaml
+
+# 打包产物
+*.tgz
+*.zip
+
+# 测试时产生的数据
+.test-alt/
+.test-book/
+.dsh-backup/
+
+# 日志与临时文件
+*.log
+.tmp-*
