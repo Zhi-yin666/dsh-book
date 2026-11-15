@@ -1,7 +1,7 @@
 {
   "name": "dsh-book",
-  "version": "0.1.0",
-  "description": "小本本：三本书——工作本（任务·可搜索·三天冷存）、日记本（经历·世界树）、笔记本（人格·扁平注入）",
+  "version": "0.5.0",
+  "description": "小本本：三本书 + 四维情绪 + 爱恶录 + 去 AI 味自检 + BM25 检索；工作本三天热存、日记本世界树、笔记本人格注入",
   "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "memory", "notebook", "book"],
   "type": "module",
   "main": "lib/index.js",

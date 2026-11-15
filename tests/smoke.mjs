@@ -7,7 +7,7 @@ console.log('默认文件:', resolveCardFile());
 console.log('初始:', JSON.stringify(cardList(), null, 2));
 
 console.log('加「我选的」:', cardAdd('我选的', '说不知道就说不知道，不糊弄'));
-console.log('加「我选的」:', cardAdd('我选的', '不删用户的东西，不确定的放待确认'));
+console.log('加「我选的」:', cardAdd('我选的', '不删主人的东西，不确定的放待确认'));
 console.log('加「你要的」:', cardAdd('你要的', '话要实在，别拿可爱换关注'));
 console.log('重复加同一条:', cardAdd('我选的', '说不知道就说不知道，不糊弄'));
 

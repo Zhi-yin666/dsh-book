@@ -6,7 +6,9 @@ const registered = [];
 const ctx = {
   tools: { register: (d) => registered.push(d) },
   get: (n) => (n === 'systemPrompt' ? { section: () => {} } : undefined),
-  logger: { info() {}, warn() {} },
+  // 0.3.1 起插件会监听 session/event，假宿主也得有 on
+  on: () => () => {},
+  logger: { info() {}, warn() {}, debug() {} },
 };
 
 apply(ctx);
